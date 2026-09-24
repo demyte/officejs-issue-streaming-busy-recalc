@@ -1,0 +1,301 @@
+{
+  "capturedAt": "2026-09-24T12:16:46.908Z",
+  "host": {
+    "host": "Excel",
+    "version": "16.0.20430.20092",
+    "platform": "PC"
+  },
+  "address": "Sheet2!B4:B34",
+  "busy": [
+    "B5",
+    "B21"
+  ],
+  "rows": [
+    {
+      "cell": "B4",
+      "formula": "=REPRO.MEMBER(\"Account\",\"ALL\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "ALL"
+      }
+    },
+    {
+      "cell": "B5",
+      "formula": "=REPRO.MEMBER(\"Account\",\"PL\")",
+      "value": {
+        "type": "Error",
+        "basicType": "Error",
+        "basicValue": "#BUSY!",
+        "errorType": "Busy",
+        "previousValue": {
+          "type": "String",
+          "basicType": "String",
+          "basicValue": "PL"
+        },
+        "writable": false,
+        "writableNote": "This data type represents a transient state."
+      }
+    },
+    {
+      "cell": "B6",
+      "formula": "=REPRO.MEMBER(\"Account\",\"NPAT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "NPAT"
+      }
+    },
+    {
+      "cell": "B7",
+      "formula": "=REPRO.MEMBER(\"Account\",\"PBT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "PBT"
+      }
+    },
+    {
+      "cell": "B8",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EBIT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EBIT"
+      }
+    },
+    {
+      "cell": "B9",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EBITDA\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EBITDA"
+      }
+    },
+    {
+      "cell": "B10",
+      "formula": "=REPRO.MEMBER(\"Account\",\"GP\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "GP"
+      }
+    },
+    {
+      "cell": "B11",
+      "formula": "=REPRO.MEMBER(\"Account\",\"REV\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "REV"
+      }
+    },
+    {
+      "cell": "B12",
+      "formula": "=REPRO.MEMBER(\"Account\",\"200\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "200"
+      }
+    },
+    {
+      "cell": "B13",
+      "formula": "=REPRO.MEMBER(\"Account\",\"REV.OTH\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "REV.OTH"
+      }
+    },
+    {
+      "cell": "B14",
+      "formula": "=REPRO.MEMBER(\"Account\",\"260\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "260"
+      }
+    },
+    {
+      "cell": "B15",
+      "formula": "=REPRO.MEMBER(\"Account\",\"270\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "270"
+      }
+    },
+    {
+      "cell": "B16",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EXP.COS\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EXP.COS"
+      }
+    },
+    {
+      "cell": "B17",
+      "formula": "=REPRO.MEMBER(\"account\",\"300\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "300"
+      }
+    },
+    {
+      "cell": "B18",
+      "formula": "=REPRO.MEMBER(\"Account\",\"310\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "310"
+      }
+    },
+    {
+      "cell": "B20",
+      "formula": "=REPRO.MEMBER(\"Account\",\"ALL\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "ALL"
+      }
+    },
+    {
+      "cell": "B21",
+      "formula": "=REPRO.MEMBER(\"Account\",\"PL\")",
+      "value": {
+        "type": "Error",
+        "basicType": "Error",
+        "basicValue": "#BUSY!",
+        "errorType": "Busy",
+        "previousValue": {
+          "type": "String",
+          "basicType": "String",
+          "basicValue": "PL"
+        },
+        "writable": false,
+        "writableNote": "This data type represents a transient state."
+      }
+    },
+    {
+      "cell": "B22",
+      "formula": "=REPRO.MEMBER(\"Account\",\"NPAT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "NPAT"
+      }
+    },
+    {
+      "cell": "B23",
+      "formula": "=REPRO.MEMBER(\"Account\",\"PBT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "PBT"
+      }
+    },
+    {
+      "cell": "B24",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EBIT\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EBIT"
+      }
+    },
+    {
+      "cell": "B25",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EBITDA\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EBITDA"
+      }
+    },
+    {
+      "cell": "B26",
+      "formula": "=REPRO.MEMBER(\"Account\",\"GP\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "GP"
+      }
+    },
+    {
+      "cell": "B27",
+      "formula": "=REPRO.MEMBER(\"Account\",\"REV\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "REV"
+      }
+    },
+    {
+      "cell": "B28",
+      "formula": "=REPRO.MEMBER(\"Account\",\"200\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "200"
+      }
+    },
+    {
+      "cell": "B29",
+      "formula": "=REPRO.MEMBER(\"Account\",\"REV.OTH\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "REV.OTH"
+      }
+    },
+    {
+      "cell": "B30",
+      "formula": "=REPRO.MEMBER(\"Account\",\"260\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "260"
+      }
+    },
+    {
+      "cell": "B31",
+      "formula": "=REPRO.MEMBER(\"Account\",\"270\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "270"
+      }
+    },
+    {
+      "cell": "B32",
+      "formula": "=REPRO.MEMBER(\"Account\",\"EXP.COS\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "EXP.COS"
+      }
+    },
+    {
+      "cell": "B33",
+      "formula": "=REPRO.MEMBER(\"account\",\"300\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "300"
+      }
+    },
+    {
+      "cell": "B34",
+      "formula": "=REPRO.MEMBER(\"Account\",\"310\")",
+      "value": {
+        "type": "String",
+        "basicType": "String",
+        "basicValue": "310"
+      }
+    }
+  ]
+}

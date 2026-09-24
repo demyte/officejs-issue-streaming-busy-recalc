@@ -1,0 +1,17 @@
+{
+  "name": "officejs-issue-streaming-busy-recalc",
+  "description": "Standalone reproduction of Excel streaming custom functions remaining Busy after full recalculation.",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "certs": "office-addin-dev-certs install",
+    "sideload": "office-addin-dev-settings sideload manifest.xml desktop --app Excel",
+    "unregister": "office-addin-dev-settings unregister manifest.xml"
+  },
+  "devDependencies": {
+    "office-addin-dev-certs": "2.0.6",
+    "office-addin-dev-settings": "3.0.6"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excel stream repro</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="functions.js"></script>
+  <script src="taskpane.js" defer></script>
+  <style>
+    body { font: 14px system-ui; margin: 16px; }
+    button { padding: 8px; margin: 0 0 8px; }
+    textarea { box-sizing: border-box; width: 100%; height: 300px; font: 12px monospace; }
+  </style>
+</head>
+<body>
+  <h1>Excel stream repro</h1>
+  <p>One streaming function, 15 argument sets, two copies of each.</p>
+  <button id="create" disabled>Create reproduction sheet</button>
+  <p>Press Ctrl+Alt+F9, wait five seconds, then repeat until cells stay calculating.</p>
+  <button id="read" disabled>Read cell states</button>
+  <p id="status" role="status">Waiting for Excel...</p>
+  <textarea id="output" aria-label="Cell snapshot JSON" readonly placeholder="The snapshot appears here. Select all and copy to share it."></textarea>
+</body>
+</html>

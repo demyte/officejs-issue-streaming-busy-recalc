@@ -1,0 +1,19 @@
+{
+  "allowErrorForDataTypeAny": true,
+  "allowCustomDataForDataTypeAny": true,
+  "functions": [
+    {
+      "id": "MEMBER",
+      "name": "MEMBER",
+      "description": "Immediately streams the supplied code as a 1x1 string matrix.",
+      "options": { "stream": true },
+      "parameters": [
+        { "name": "hierarchyOrMember", "description": "Hierarchy.", "type": "any", "dimensionality": "matrix" },
+        { "name": "memberCode", "description": "Code to return.", "type": "any", "dimensionality": "matrix", "optional": true },
+        { "name": "relation", "description": "Unused; preserves the original signature.", "type": "string", "optional": true },
+        { "name": "ordinal", "description": "Unused; preserves the original signature.", "type": "number", "optional": true }
+      ],
+      "result": { "dimensionality": "matrix" }
+    }
+  ]
+}

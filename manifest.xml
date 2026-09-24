@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xsi:type="TaskPaneApp">
+  <Id>b9f79658-8185-4f08-bcc1-8dd39fc3f1d8</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Local reproduction</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Excel stream repro"/>
+  <Description DefaultValue="Minimal duplicate streaming custom-function reproduction."/>
+  <IconUrl DefaultValue="https://localhost:3443/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3443/icon-80.png"/>
+  <SupportUrl DefaultValue="https://localhost:3443/index.html"/>
+  <Hosts><Host Name="Workbook"/></Hosts>
+  <Requirements><Sets DefaultMinVersion="1.1"><Set Name="SharedRuntime" MinVersion="1.1"/></Sets></Requirements>
+  <DefaultSettings><SourceLocation DefaultValue="https://localhost:3443/index.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <Runtimes><Runtime resid="Taskpane.Url" lifetime="long"/></Runtimes>
+        <AllFormFactors>
+          <ExtensionPoint xsi:type="CustomFunctions">
+            <Script><SourceLocation resid="Functions.Script.Url"/></Script>
+            <Page><SourceLocation resid="Taskpane.Url"/></Page>
+            <Metadata><SourceLocation resid="Functions.Metadata.Url"/></Metadata>
+            <Namespace resid="Functions.Namespace"/>
+          </ExtensionPoint>
+        </AllFormFactors>
+        <DesktopFormFactor>
+          <FunctionFile resid="Taskpane.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="StreamRepro.Group">
+                <Label resid="Group.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16"/>
+                  <bt:Image size="32" resid="Icon.32"/>
+                  <bt:Image size="80" resid="Icon.80"/>
+                </Icon>
+                <Control xsi:type="Button" id="StreamRepro.Open">
+                  <Label resid="Open.Label"/>
+                  <Supertip><Title resid="Open.Label"/><Description resid="Open.Description"/></Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16"/>
+                    <bt:Image size="32" resid="Icon.32"/>
+                    <bt:Image size="80" resid="Icon.80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16" DefaultValue="https://localhost:3443/icon-16.png"/>
+        <bt:Image id="Icon.32" DefaultValue="https://localhost:3443/icon-32.png"/>
+        <bt:Image id="Icon.80" DefaultValue="https://localhost:3443/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3443/index.html"/>
+        <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3443/functions.js"/>
+        <bt:Url id="Functions.Metadata.Url" DefaultValue="https://localhost:3443/functions.json"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Functions.Namespace" DefaultValue="REPRO"/>
+        <bt:String id="Group.Label" DefaultValue="Stream repro"/>
+        <bt:String id="Open.Label" DefaultValue="Open repro"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Open.Description" DefaultValue="Create duplicate formulas and read their cell states."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

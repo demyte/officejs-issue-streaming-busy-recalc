@@ -1,0 +1,26 @@
+{
+  "workbook": "repro.xlsx",
+  "workbookSha256": "FFBB52E74F8590815851D1653DBA545D3CBBBB8C07252D3B6909B474CC2B5FA2",
+  "origin": "Created by the standalone taskpane",
+  "freshExcelProcess": true,
+  "excelVersion": "16.0.20430.20092",
+  "platform": "PC",
+  "operatingSystem": "Windows 11 Pro Insider Preview, build 28120",
+  "baseline": {
+    "capturedAt": "2026-09-24T12:13:18.490Z",
+    "busy": [],
+    "evidence": "Public reader output observed in the taskpane; full baseline JSON was not exported"
+  },
+  "manualRecalculations": 3,
+  "key": "Ctrl+Alt+F9",
+  "after": {
+    "capturedAt": "2026-09-24T12:16:46.908Z",
+    "busy": ["B5", "B21"],
+    "code": "PL",
+    "resolvedStringCells": 28,
+    "snapshot": "busy-snapshot.json",
+    "screenshot": "busy.png"
+  },
+  "captureNotes": "Calculating icons appeared after the third manual recalculation. The failed-state read was taken after a pause, without any additional recalculation. DevTools was opened only after the public read to extract the existing textarea JSON; no Office hooks were added.",
+  "environmentNotes": "Other add-ins were installed during the capture. The workbook contains a blank Sheet1 and a very-hidden _REFERENCE888777888 sheet with eight generic report headers and no records. The workbook bytes are unchanged. This has not been repeated with other add-ins removed."
+}
