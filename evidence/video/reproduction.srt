@@ -1,0 +1,62 @@
+1
+00:00:00,000 --> 00:00:07,000
+Excel is already open with repro.xlsx and the standalone add-in loaded.
+
+2
+00:00:07,000 --> 00:00:13,000
+Two copies of 15 argument sets. Earlier healthy recalculations are omitted.
+
+3
+00:00:13,000 --> 00:00:22,000
+I click Read cell states. The public reader reports no Busy cells.
+
+4
+00:00:22,000 --> 00:00:31,000
+The streaming handler immediately calls setResult with the supplied code.
+There is no data fetch, cache, timer or promise in the handler.
+
+5
+00:00:31,000 --> 00:00:39,000
+Expected: every formula resolves to its code after recalculation,
+with no calculating icon left behind.
+
+6
+00:00:39,000 --> 00:00:53,500
+I return focus to the worksheet, then request a full recalculation.
+
+7
+00:00:53,500 --> 00:01:00,000
+Ctrl+Alt+F9: recalculate every formula.
+
+8
+00:01:00,000 --> 00:01:17,800
+Both GP cells retain calculating icons: B10 and B26.
+I stop recalculating and leave the worksheet untouched.
+
+9
+00:01:17,800 --> 00:01:28,000
+I click Read cell states again.
+The add-in reads Excel Range.valuesAsJson.
+
+10
+00:01:28,000 --> 00:01:35,300
+Excel reports Busy in B10 and B26, although both still display GP.
+
+11
+00:01:35,300 --> 00:01:51,400
+B10 contains =REPRO.MEMBER("Account","GP").
+It should resolve to the string GP.
+
+12
+00:01:51,400 --> 00:02:07,800
+B26 has the identical formula. Both copies still show calculating icons.
+
+13
+00:02:07,800 --> 00:02:18,000
+I read again, 74 seconds after the last recalculation.
+The public reader still reports Busy in both cells.
+
+14
+00:02:18,000 --> 00:02:28,000
+Expected: both formulas resolve. Actual: both remain Busy.
+Excel for Windows 16.0.20430.20092. The failure is intermittent.

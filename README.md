@@ -2,7 +2,9 @@
 
 A standalone Office.js reproduction for desktop Excel. One streaming function immediately supplies a string, but full recalculation can leave both cells with identical arguments stuck at `#BUSY!`.
 
-Observed on Excel for Windows **16.0.20430.20092**. In the recorded run, all 30 formulas initially resolved. The third Ctrl+Alt+F9 left Sheet2!B5 and B21 Busy, both using `=REPRO.MEMBER("Account","PL")`. The other 28 formulas resolved.
+Observed on Excel for Windows **16.0.20430.20092**. In the initial snapshot run, all 30 formulas initially resolved. The third Ctrl+Alt+F9 left Sheet2!B5 and B21 Busy, both using `=REPRO.MEMBER("Account","PL")`. The other 28 formulas resolved.
+
+[Watch the captioned reproduction video](evidence/video/reproduction-captioned.mp4), 2 minutes 28 seconds. This separate run shows both `GP` cells at B10 and B26 remaining Busy 74 seconds after recalculation. It starts with the workbook and add-in loaded and includes a healthy baseline. [Capture notes and timeline](evidence/video/README.md).
 
 ## Run the reproduction
 
@@ -31,7 +33,7 @@ npm run sideload
 5. Click a blank worksheet cell, press **Ctrl+Alt+F9**, and wait at least five seconds. Repeat until calculating icons remain.
 6. Stop recalculating and click **Read cell states** again. Copy its JSON to capture the actual cell values.
 
-The failure is intermittent. Three recalculations triggered the recorded failure, but this is not a fixed threshold. The affected argument set can vary.
+The failure is intermittent. Three recalculations triggered the initial snapshot failure, but this is not a fixed threshold. The affected argument set can vary.
 
 **Expected:** every formula resolves to its supplied code after each recalculation.
 
@@ -62,6 +64,7 @@ The capture machine had other add-ins installed, including a Premier Constructio
 
 ## Evidence and bug report
 
+- [Captioned video](evidence/video/reproduction-captioned.mp4), [captions](evidence/video/reproduction.srt), and [capture notes](evidence/video/README.md) from a separate run with B10 and B26 Busy.
 - [Full public cell snapshot](evidence/busy-snapshot.json), captured at 2026-09-24 12:16:46.908 UTC.
 - [Screenshot](evidence/busy.png) showing both calculating cells and the matching public reader output.
 - [Run record](evidence/observation.json), including baseline time, recalculation count, environment and unchanged workbook SHA256.

@@ -19,13 +19,15 @@ A streaming custom function that immediately calls `invocation.setResult([[code]
 
 After repeated Ctrl+Alt+F9 calculations, both copies of one argument set can remain `#BUSY!`. The previous string stays visible with a calculating icon.
 
-In the recorded standalone run, all 30 formulas initially resolved. The third full recalculation left Sheet2!B5 and B21 Busy. Both contain:
+In the initial standalone snapshot run, all 30 formulas initially resolved. The third full recalculation left Sheet2!B5 and B21 Busy. Both contain:
 
 ```excel
 =REPRO.MEMBER("Account","PL")
 ```
 
 A subsequent public `Range.valuesAsJson` read returned `type: "Error"`, `basicValue: "#BUSY!"`, `errorType: "Busy"` and previous string PL for those two cells. The other 28 formulas returned resolved strings. The failure is intermittent and the affected arguments can vary.
+
+A separate [captioned video](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/video/reproduction-captioned.mp4) shows a healthy baseline followed by both `GP` cells at B10 and B26 remaining Busy. A second public read confirms they are still Busy 74 seconds after the last recalculation. The video is a continuous real-time excerpt; earlier healthy attempts were trimmed. [Capture notes and timeline](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/video/README.md).
 
 ## Steps to reproduce
 
@@ -68,6 +70,7 @@ A production streaming custom-function add-in intermittently leaves duplicate fo
 
 ## Useful logs
 
+- [Captioned reproduction video](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/video/reproduction-captioned.mp4) and [caption transcript](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/video/reproduction.srt).
 - [Full public cell-state JSON](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/busy-snapshot.json).
 - [Screenshot of the failure](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/busy.png).
 - [Run record and workbook hash](https://github.com/demyte/officejs-issue-streaming-busy-recalc/blob/main/evidence/observation.json).
